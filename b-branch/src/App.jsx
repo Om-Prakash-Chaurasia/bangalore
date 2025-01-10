@@ -2,15 +2,13 @@ import React from "react";
 import "./index.css";
 import "./App.css";
 import Greetings from "./components/Greetings";
-import { Hello, Goodbye } from "./components/Greetings";
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
     <div>
-      App
-      <Greetings />
-      <Hello />
-      <Goodbye />
+      <Welcome name="Robert Drowny Junior" />
+      <Greetings timeOfDay="Night" name="Om Prakash" />
     </div>
   );
 }

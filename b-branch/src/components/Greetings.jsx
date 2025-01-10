@@ -1,16 +1,24 @@
 import React from "react";
+import propTypes from "prop-types";
 
-function Greetings() {
-  return <div>Hello, Everyone</div>;
+function Greetings(props) {
+  return (
+    <div>
+      <h1>
+        Good {props.timeOfDay}, {props.name}
+      </h1>
+    </div>
+  );
 }
 
-function Hello() {
-  return <div>Hello</div>;
-}
+Greetings.propTypes = {
+  timeOfDay: propTypes.string,
+  name: propTypes.string,
+};
 
-function Goodbye() {
-  return <div>Goodbye</div>;
-}
+Greetings.defaultProps = {
+  timeOfDay: "Morning",
+  name: "User",
+};
 
 export default Greetings;
-export { Hello, Goodbye };
