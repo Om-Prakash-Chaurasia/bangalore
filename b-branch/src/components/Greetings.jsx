@@ -7,18 +7,19 @@ function Greetings(props) {
       <h1>
         Good {props.timeOfDay}, {props.name}
       </h1>
+      <p>Well Thanks {props.sum}</p>
     </div>
   );
 }
 
-Greetings.propTypes = {
-  timeOfDay: propTypes.string,
-  name: propTypes.string,
-};
+// Greetings.propTypes = {
+//   timeOfDay: propTypes.string,
+//   name: propTypes.string,
+// };
 
-Greetings.defaultProps = {
-  timeOfDay: "Morning",
-  name: "User",
-};
+// Greetings.defaultProps = {
+//   timeOfDay: "Morning",
+//   name: "User",
+// };
 
 export default Greetings;
