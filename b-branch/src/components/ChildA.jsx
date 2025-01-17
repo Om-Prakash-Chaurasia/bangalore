@@ -1,12 +1,10 @@
 import React from "react";
 import ChildB from "./ChildB";
 
-function ChildA({ name }) {
+function ChildA() {
   return (
     <div>
-      <h2>My name is {name}</h2>
-
-      <ChildB name={name} />
+      <ChildB />
     </div>
   );
 }

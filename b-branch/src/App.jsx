@@ -1,18 +1,31 @@
-import React from "react";
+import React, { createContext } from "react";
 import ChildA from "./components/ChildA";
 
-function App() {
-  const name = "Shiva";
-  const age = 25;
+// create --> createContext();
+// provider --> contextProvider();
+// consumer --> contextConsumer();
+
+const data = createContext();
+const data1 = createContext();
+const data2 = createContext();
+
+export default function App() {
+  const name = "Aravind";
+  const age = 18;
+  const gender = "male";
 
   return (
     <div>
-      <h1>
-        My name is {name} and I am {age} years old.
-      </h1>
-      <ChildA name={name} />
+      <data.Provider value={name}>
+        <data1.Provider value={age}>
+          <data2.Provider value={gender}>
+            <ChildA />
+          </data2.Provider>
+        </data1.Provider>
+      </data.Provider>
     </div>
   );
 }
 
-export default App;
+// export default App;
+export { data, data1, data2 };
