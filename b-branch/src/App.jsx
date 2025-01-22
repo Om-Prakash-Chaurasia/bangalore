@@ -69,22 +69,35 @@
 
 // useCallback Hook :-
 
-import React, { useState, useCallback } from "react";
-import ChildA from "./components/ChildA";
+// import React, { useState, useCallback } from "react";
+// import ChildA from "./components/ChildA";
+
+// function App() {
+//   const [add, setAdd] = useState(0);
+
+//   const Learning = useCallback(() => {
+//     // some opearations
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Learning useCallback</h1>
+//       <ChildA Learning={Learning} />
+//       <h1>{add}</h1>
+//       <button onClick={() => setAdd(add + 1)}>Addition</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import ControlledForm from "./components/ControlledForm";
 
 function App() {
-  const [add, setAdd] = useState(0);
-
-  const Learning = useCallback(() => {
-    // some opearations
-  }, []);
-
   return (
     <div>
-      <h1>Learning useCallback</h1>
-      <ChildA Learning={Learning} />
-      <h1>{add}</h1>
-      <button onClick={() => setAdd(add + 1)}>Addition</button>
+      <ControlledForm />
     </div>
   );
 }
