@@ -91,13 +91,28 @@
 
 // export default App;
 
-import React from "react";
+import React, { useRef } from "react";
 import ControlledForm from "./components/ControlledForm";
+import UseRef from "./components/UseRef";
+import UncontrolledForm from "./components/UncontrolledForm";
 
 function App() {
+  const refObject = useRef();
+  console.log(refObject);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(refObject.current.value.toUpperCase());
+  }
   return (
     <div>
-      <ControlledForm />
+      {/* <ControlledForm /> */}
+      {/* <UseRef /> */}
+      {/* <UncontrolledForm /> */}
+      <form onSubmit={handleSubmit}>
+        <input type="text" ref={refObject} />
+        <button>Submit</button>
+      </form>
     </div>
   );
 }
